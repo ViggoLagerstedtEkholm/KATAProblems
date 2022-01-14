@@ -1,9 +1,111 @@
 package com.company;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
-        reverseSentence();
+        arrayDiff();
+    }
+
+    private static void arrayDiff(){
+        ArrayDiff arrayDiff = new ArrayDiff();
+        int[] result = arrayDiff.arrayDiff(new int[] {1, 2}, new int[] {1});
+
+        //for (int j : result) {
+            //System.out.println(j);
+        //}
+    }
+
+    private static void getCount(){
+        VowelCount vowelCount = new VowelCount();
+        int count = vowelCount.getCount("abracadabra");
+        System.out.println(count);
+    }
+
+    private static void removeDuplicates(){
+        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
+        String res = removeDuplicates.removeConsecutiveDuplicates("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta");
+        System.out.println(res);
+    }
+
+    private static void connectFour(){
+        ConnectFour connectFour = new ConnectFour();
+        List<String> myList = new ArrayList<>(Arrays.asList(
+                "A_Red",
+                "B_Yellow",
+                "A_Red",
+                "B_Yellow",
+                "A_Red",
+                "B_Yellow",
+                "G_Red",
+                "B_Yellow"
+        ));
+        String winner = connectFour.whoIsWinner(myList);
+        System.out.println(winner);
+    }
+
+    private static void consonantValue(){
+        ConsonantValue consonantValue = new ConsonantValue();
+        int highest = consonantValue.solve("zodiacs");
+        System.out.println("Highest scoring: " + highest);
+
+    }
+
+    private static void highestScoringWord(){
+        HighestScoringWord highestScoringWord = new HighestScoringWord();
+        String result = highestScoringWord.high("bb d");
+        System.out.println("Result: " + result);
+    }
+
+    private static void ballUpwards(){
+        BallUpwards ballUpwards = new BallUpwards();
+        int height = ballUpwards.maxBall(37);
+        System.out.println("Height: " + height);
+    }
+
+    private static void restaurantProblem(){
+        RestaurantProblem restaurantProblem = new RestaurantProblem();
+        String order = restaurantProblem.getOrder("milkshakepizzachickenfriescokeburgerpizzasandwichmilkshakepizza");
+        System.out.println("ORDER: " + order);
+    }
+
+    private static void streetFighter(){
+        String[][] fighters = new String[][]{
+                new String[] { "Ryu", "E.Honda", "Blanka", "Guile", "Balrog", "Vega" },
+                new String[] { "Ken", "Chun Li", "Zangief", "Dhalsim", "Sagat", "M.Bison" },
+        };
+
+        String[] moves = new String[] { "up", "left", "right", "left", "left" };
+
+        StreetFighter2Characters streetFighter2Characters = new StreetFighter2Characters();
+        String[] characters = streetFighter2Characters.streetFighterSelection(fighters, new int[] {0,0}, moves);
+
+        System.out.println("Visited: ");
+        for (String character : characters) {
+            System.out.println(character);
+        }
+
+    }
+
+    private static void encode(){
+        DuplicateEncoder duplicateEncoder = new DuplicateEncoder();
+        String encoded = duplicateEncoder.encode("(( @");
+        System.out.println(encoded);
+    }
+
+    private static void multiTap(){
+        MultiTap multiTap = new MultiTap();
+        int totalSteps = multiTap.presses("1");
+        System.out.println(totalSteps);
+    }
+
+    private static void factorial(){
+        Factorial factorial = new Factorial();
+        String result = factorial.factorial(100);
+        System.out.println(result);
     }
 
     private static void reverseSentence(){
@@ -73,8 +175,8 @@ public class Main {
         Flip flip = new Flip();
         int[] sorted = flip.Flip('L', new int[]{ 1,2,2,3 });
 
-        for(int i = 0; i < sorted.length; i++){
-            System.out.println(sorted[i]);
+        for (int j : sorted) {
+            System.out.println(j);
         }
     }
 }
