@@ -7,7 +7,13 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        arrayDiff();
+        disemvowelTrolls();
+    }
+
+    private static void disemvowelTrolls(){
+        DisemvowelTrolls disemvowelTrolls = new DisemvowelTrolls();
+        String censored = disemvowelTrolls.disemvowel("This website is for losers LOL!");
+        System.out.println(censored);
     }
 
     private static void arrayDiff(){
