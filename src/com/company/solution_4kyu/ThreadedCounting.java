@@ -5,7 +5,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 public class ThreadedCounting {
-    /*public static void countInThreads(Counter counter){
+    public static void countInThreads(Counter counter){
         ExecutorService[] executorServices = createExecutorServices();
         try{
             for(int i = 0; i < 100; i++){
@@ -28,5 +28,5 @@ public class ThreadedCounting {
         }
         return executorServices;
     }
-    */
+
 }
