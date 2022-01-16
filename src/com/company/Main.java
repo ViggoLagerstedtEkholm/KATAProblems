@@ -1,5 +1,14 @@
 package com.company;
 
+import com.company.solution_4kyu.ConnectFour;
+import com.company.solution_4kyu.Factorial;
+import com.company.solution_5kyu.HumanReadableTIme;
+import com.company.solution_5kyu.SatNavDir;
+import com.company.solution_6kyu.*;
+import com.company.solution_7kyu.*;
+import com.company.solution_8kyu.Flip;
+
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -7,7 +16,67 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        disemvowelTrolls();
+        yourOrderPlease();
+    }
+
+    private static void yourOrderPlease(){
+        YourOrderPlease.order("is2 Thi1s T4est 3a");
+    }
+
+    private static void isIsogram(){
+        boolean isIsogram = Isogram.isIsogram("Dermatoglyphics");
+        System.out.println("isIsogram: " + isIsogram);
+    }
+
+    private static void getMiddleCharacter(){
+        String result1 = GetMiddleCharacter.getMiddle("test");
+        System.out.println("R1. " + result1);
+
+        String result2 = GetMiddleCharacter.getMiddle("testing");
+        System.out.println("R2. " + result2);
+    }
+
+    private static void windComponentCalc(){
+        String message = WindComponentCalc.message("18L", 170, 15);
+        System.out.println(message);
+    }
+
+    private static void whichAreIn(){
+        String a[] = new String[]{ "arp", "live", "strong" };
+        String b[] = new String[] { "lively", "alive", "harp", "sharp", "armstrong" };
+        WhichAreIn.inArray(a,b);
+    }
+
+    private static void dRoot(){
+        SumOfDigits.digital_root(16);
+    }
+
+    private static void satNavDirections(){
+        final String[] directions = new String[] {
+                "Head SOUTH",
+                "Go straight on for 1.2km",
+                "Take the 5th RIGHT",
+
+                "You have reached your destination"
+        };
+
+        SatNavDir satNavDir = new SatNavDir();
+        Point point = satNavDir.satNav(directions);
+        System.out.println("X: " + point.x);
+        System.out.println("Y: " + point.y);
+    }
+
+    private static void scoringTests(){
+        //ScoringTests.sol();
+    }
+
+    private static void mexicanWave(){
+        MexicanWave mexicanWave = new MexicanWave();
+        String[] waved = mexicanWave.wave("two words");
+
+        for (String s : waved) {
+            System.out.println("res: " + s);
+        }
     }
 
     private static void disemvowelTrolls(){
@@ -16,25 +85,10 @@ public class Main {
         System.out.println(censored);
     }
 
-    private static void arrayDiff(){
-        ArrayDiff arrayDiff = new ArrayDiff();
-        int[] result = arrayDiff.arrayDiff(new int[] {1, 2}, new int[] {1});
-
-        //for (int j : result) {
-            //System.out.println(j);
-        //}
-    }
-
     private static void getCount(){
         VowelCount vowelCount = new VowelCount();
         int count = vowelCount.getCount("abracadabra");
         System.out.println(count);
-    }
-
-    private static void removeDuplicates(){
-        RemoveDuplicates removeDuplicates = new RemoveDuplicates();
-        String res = removeDuplicates.removeConsecutiveDuplicates("alpha beta beta gamma gamma gamma delta alpha beta beta gamma gamma gamma delta");
-        System.out.println(res);
     }
 
     private static void connectFour(){
@@ -64,12 +118,6 @@ public class Main {
         HighestScoringWord highestScoringWord = new HighestScoringWord();
         String result = highestScoringWord.high("bb d");
         System.out.println("Result: " + result);
-    }
-
-    private static void ballUpwards(){
-        BallUpwards ballUpwards = new BallUpwards();
-        int height = ballUpwards.maxBall(37);
-        System.out.println("Height: " + height);
     }
 
     private static void restaurantProblem(){
@@ -127,11 +175,6 @@ public class Main {
 
     }
 
-    private static void getSum(){
-        GetSum getSum = new GetSum();
-        getSum.getSum(1, 5);
-    }
-
     private static void perfectSquare(){
         PerfectSquare perfectSquare = new PerfectSquare();
         perfectSquare.findNextSquare(121);
@@ -153,11 +196,6 @@ public class Main {
 
     }
 
-    private static void findEvenIndex(){
-        FindEvenIndex findEvenIndex = new FindEvenIndex();
-        findEvenIndex.findEvenIndex(new int[] {1,2,3,4,3,2,1});
-    }
-
     private static void square(){
         Square square = new Square();
         int result = square.squareDigits(9119);
@@ -172,7 +210,7 @@ public class Main {
     }
 
     private static void uppercase(){
-        Uppercase uppercase = new Uppercase();
+        JadenCase uppercase = new JadenCase();
         String newString = uppercase.toJadenCase("How can mirrors be real if our eyes aren't real");
         System.out.println(newString);
     }
