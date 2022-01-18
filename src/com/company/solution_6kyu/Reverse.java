@@ -4,7 +4,13 @@ public class Reverse {
     public String spinWords(String sentence) {
         String[] words = sentence.split(" ");
         StringBuilder newSentence = new StringBuilder();
+        newSentence.append(sentence).reverse();
 
+        for(int i = 0; i < sentence.length(); i++){
+            sentence.charAt(i);
+            newSentence.append(sentence.charAt(i)).reverse();
+
+        }
         //Go through all the words in the array.
         for (String word : words) {
             StringBuilder newWord = new StringBuilder();
@@ -25,6 +31,6 @@ public class Reverse {
         }
 
         //Trim the last space after the last word.
-        return newSentence.toString().trim();
+        return newSentence.append(sentence).reverse().toString();
     }
 }
