@@ -2,10 +2,13 @@ package com.company;
 
 import com.company.solution_4kyu.ConnectFour;
 import com.company.solution_4kyu.Factorial;
+import com.company.solution_4kyu.Snail;
+import com.company.solution_5kyu.DirectionReduction;
 import com.company.solution_5kyu.HumanReadableTIme;
 import com.company.solution_5kyu.SatNavDir;
 import com.company.solution_6kyu.*;
 import com.company.solution_7kyu.*;
+import com.company.solution_8kyu.AWolfInSheepsClothing;
 import com.company.solution_8kyu.Flip;
 
 import java.awt.*;
@@ -16,7 +19,57 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        yourOrderPlease();
+        snail();
+    }
+
+    private static void snail(){
+        int[][] array1
+                = {{1, 2, 3},
+                {4, 5, 6},
+                {7, 8, 9}};
+
+        int[][] array2
+                = {{44, 231, 552, 797, 955, 88},
+                {832, 494, 953, 138, 18, 203},
+                {662, 153, 47, 696, 24, 484},
+                {934, 738, 113, 917, 970, 409},
+                {971, 994, 215, 502, 773, 490},
+                {746, 635, 543, 407, 100, 781}
+        };
+
+        int[][] array3
+                = {{809}};
+
+        int[][] array4
+                = {{951, 247, 972},
+                {132, 948, 981},
+                {537, 838, 377},
+        };
+
+        int[] result = Snail.snail(array4);
+
+        System.out.println(Arrays.toString(array3));
+        for (int j : result) {
+            System.out.print(j + " ");
+        }
+    }
+
+    private static void aWolfInSheepsClothing(){
+        String result = AWolfInSheepsClothing.warnTheSheep(new String[]{"sheep", "wolf", "sheep", "sheep", "sheep", "sheep", "sheep"});
+        System.out.println("result: " + result);
+    }
+
+    private static void creditCardMask(){
+        String result = CreditCardMask.maskify("test1234");
+        System.out.println("result: " + result);
+    }
+
+    private static void sortArr(){
+        SortTheOdd.sortArray(new int[]{ 5, 3, 2, 8, 1, 4 });
+    }
+
+    private static void directionReduction(){
+        DirectionReduction.dirReduc(new String[]{"NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"});
     }
 
     private static void yourOrderPlease(){
