@@ -1,9 +1,12 @@
 package com.company;
 
+import com.company.MyKatas.ContactList;
 import com.company.solution_4kyu.ConnectFour;
 import com.company.solution_4kyu.Factorial;
+import com.company.solution_4kyu.PathFinder;
 import com.company.solution_4kyu.Snail;
 import com.company.solution_5kyu.DirectionReduction;
+import com.company.solution_5kyu.EscapeWithYourBooty;
 import com.company.solution_5kyu.HumanReadableTIme;
 import com.company.solution_5kyu.SatNavDir;
 import com.company.solution_6kyu.*;
@@ -19,7 +22,55 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        snail();
+        String[] names =  new String[] { "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"};
+        List<String> result = ContactList.getSortedAndCategorised(names);
+
+        for(String name : result){
+            System.out.println(name);
+        }
+    }
+
+    private static void pathFinder(){
+        String d = "......\n"+
+                "......\n"+
+                "......\n"+
+                "......\n"+
+                ".....W\n"+
+                "....W.";
+
+        String a = ".W.\n"+
+                ".W.\n"+
+                "...";
+
+        boolean path = PathFinder.pathFinder(a);
+        System.out.println("PATH: " + path);
+    }
+
+    private static void bouncyBalls(){
+        int seen = BouncyBalls.bouncingBall(3.0, 0.66, 1.5);
+
+        System.out.println(seen);
+    }
+
+    private static void escapeWithYourBooty(){
+        char[][] map = new char[5][6];
+        char[] line1 = {'0','0','0','0','N','0'};
+        char[] line2 = {'0','0','0','0','0','0'};
+        char[] line3 = {'X','0','0','0','0','0'};
+        char[] line4 = {'0','0','0','0','0','0'};
+        char[] line5 = {'0','0','0','0','0','0'};
+        map[0] = line1;
+        map[1] = line2;
+        map[2] = line3;
+        map[3] = line4;
+        map[4] = line5;
+
+        boolean success = EscapeWithYourBooty.checkCourse(map);
+        System.out.println("RESULT: " + success);
+    }
+
+    private static void countingDuplicates(){
+        CountingDuplicates.duplicateCount("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZReturnsTwentySix");
     }
 
     private static void snail(){
