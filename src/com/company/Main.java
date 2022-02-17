@@ -1,6 +1,5 @@
 package com.company;
 
-import com.company.MyKatas.ContactList;
 import com.company.solution_4kyu.ConnectFour;
 import com.company.solution_4kyu.Factorial;
 import com.company.solution_4kyu.PathFinder;
@@ -12,6 +11,7 @@ import com.company.solution_5kyu.SatNavDir;
 import com.company.solution_6kyu.*;
 import com.company.solution_7kyu.*;
 import com.company.solution_8kyu.AWolfInSheepsClothing;
+import com.company.solution_8kyu.AlternateCasing;
 import com.company.solution_8kyu.Flip;
 
 import java.awt.*;
@@ -22,12 +22,8 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String[] names =  new String[] { "Adam", "Alex", "Aaron", "Ben", "Carl", "Dan", "David", "Edward", "Fred", "Frank", "George", "Hal", "Hank", "Ike", "John", "Jack", "Joe", "Larry", "Monte", "Matthew", "Mark", "Nathan", "Otto", "Paul", "Peter", "Roger", "Roger", "Steve", "Thomas", "Tim", "Ty", "Victor", "Walter"};
-        List<String> result = ContactList.getSortedAndCategorised(names);
-
-        for(String name : result){
-            System.out.println(name);
-        }
+        String alternate = AlternateCasing.toAlternativeString("sTRINGuTILS.TOaLTERNATINGcASE");
+        System.out.println(alternate);
     }
 
     private static void pathFinder(){
