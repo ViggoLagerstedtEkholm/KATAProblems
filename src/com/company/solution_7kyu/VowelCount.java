@@ -16,6 +16,10 @@ public class VowelCount {
             }
         }
 
+        int test = 1;
+        StringBuilder sb = new StringBuilder();
+        sb.append(test).append(" ");
+
         return count;
     }
 }

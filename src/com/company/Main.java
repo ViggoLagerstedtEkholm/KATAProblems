@@ -10,9 +10,7 @@ import com.company.solution_5kyu.HumanReadableTIme;
 import com.company.solution_5kyu.SatNavDir;
 import com.company.solution_6kyu.*;
 import com.company.solution_7kyu.*;
-import com.company.solution_8kyu.AWolfInSheepsClothing;
-import com.company.solution_8kyu.AlternateCasing;
-import com.company.solution_8kyu.Flip;
+import com.company.solution_8kyu.*;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -22,8 +20,9 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-        String alternate = AlternateCasing.toAlternativeString("sTRINGuTILS.TOaLTERNATINGcASE");
-        System.out.println(alternate);
+        Object[] result = LongestConsecutiveRepetition.longestRepetition("aaaabb");
+        System.out.println("Key: " + result[0]);
+        System.out.println("Value: " + result[1]);
     }
 
     private static void pathFinder(){
